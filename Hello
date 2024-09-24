@@ -1,1 +1,30 @@
-Hello
+number_1 = 0
+number_2 = 0
+choice = ""
+
+def operator(choice):
+    chosen_in = input("Type + for add, - for minus, * for multiply, / for divide: ")
+    return chosen_in
+
+def user_input(number_1,number_2):
+    num_in_1 = int(input("Type in the first number: "))
+    num_in_2 = int(input("Type in the second number: "))
+    return num_in_1,num_in_2
+
+def calculator(choice,number_1,number_2):
+    chosen = choice
+    num1 = number_1
+    num2 = number_2
+    if chosen == "+":
+        print(num1+num2)
+    elif chosen == "-":
+        print(num1-num2)
+    elif chosen == "*":
+        print(num1*num2)
+    elif chosen == "/":
+        print(num1/num2)
+
+choice = operator(choice)
+number_1,number_2 = user_input(number_1,number_2)
+calculator(choice,number_1,number_2)
+
